@@ -1,0 +1,17 @@
+.header {
+    text-align: center;
+    margin: 0 auto;
+    border-bottom: 5px dashed #000;
+}
+
+.title {
+    margin: 24px 0 12px;
+}
+.subtitle {
+    margin-bottom: 24px;
+}
+.disclaimer {
+    color: #555;
+    font-size: 12px;
+    margin-bottom: 6px;
+}

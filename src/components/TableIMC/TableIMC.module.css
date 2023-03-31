@@ -1,0 +1,20 @@
+.imcTable {
+    text-transform: uppercase;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+.imcTable__cell {
+    padding: 8px;
+    border: 1px solid #555;
+}
+
+.imcTable__header {
+    font-weight: bold;
+    background-color: #576CBC;
+    color: aliceblue;
+}
+
+.imcTable__body {
+    background-color: #DAF5FF;
+}
