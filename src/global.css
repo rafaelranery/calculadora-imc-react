@@ -4,8 +4,26 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
+html {
+    background-color: #999;
+}
 
 .body-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
+
+/* Classes para classificação IMC */
+.normal {
+    background-color: #99cc33;
+}
+.caution {
+    background-color: #ffcc00;
+}
+.danger {
+    background-color: #ff9966;
+}
+.emergency {
+    background-color: #cc3300;
+}
+/* Classes para classificação IMC */

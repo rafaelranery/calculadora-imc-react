@@ -1,7 +1,8 @@
-import { useState } from 'react'
-import Header from './components/Header'
-import About from './components/About'
-import './global.css'
+import { useState } from 'react';
+import Header from './components/Header';
+import About from './components/About';
+import ImcCal from './components/ImcCalc';
+import './global.css';
 
 
 function App() {
@@ -12,9 +13,10 @@ function App() {
       <Header />
       <div className="body-grid">
         <About />
+        <ImcCal />
       </div>
     </>
   )
 }
 
-export default App
+export default App;
