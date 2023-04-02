@@ -27,3 +27,8 @@ html {
     background-color: #cc3300;
 }
 /* Classes para classificação IMC */
+
+/* Variables */
+:root {
+    --blackPrimary: #000;
+}

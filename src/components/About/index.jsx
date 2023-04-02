@@ -3,7 +3,6 @@ import styles from './About.module.css';
 
 const About = () => {
 
-
     return (
         <>
             <div className={styles.icmInfo}>
@@ -19,7 +18,7 @@ const About = () => {
                         Quer descobrir seu IMC? Insira seu peso e sua altura nos campos ao lado e compare com os índices da tabela. Importante: siga os exemplos e use pontos como separadores.
                     </p>
                 </article>
-                {/* terminar de fazer a table; mas componentizala pois parece mais fácil em organização, assim fica o elemento do about e um elemento da tabela que o about utiliza */}
+        
                 <TableImc />
             </div>
         </>

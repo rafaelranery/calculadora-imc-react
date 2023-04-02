@@ -18,3 +18,7 @@
 .imcTable__body {
     background-color: #DAF5FF;
 }
+
+.active {
+    background-color: green;
+}

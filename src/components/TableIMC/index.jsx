@@ -1,6 +1,7 @@
-import styles from './TableIMC.module.css'
+import styles from './TableIMC.module.css';
 
 const TableImc = () => {
+
 
     return (
         <table className={styles.imcTable}>

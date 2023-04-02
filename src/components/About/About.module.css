@@ -5,7 +5,7 @@
 
 .imcInfo__title {
     font-size: 44px;
-    border-bottom: 1px dashed #999;
+    border-bottom: 1px dashed var(--blackPrimary);
 }
 
 .imcInfo__article {

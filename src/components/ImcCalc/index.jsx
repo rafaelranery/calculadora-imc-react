@@ -9,28 +9,22 @@ const ImcCal = () => {
     const [imc, setImc] = useState(0);
     const [classImc, setClassImc] = useState('')
     const [allInputsValid, setAllInputsValid] = useState(false);
-    const [imcValid, setImcValid] = useState(false);
+    const [calcOn, setCalcOn] = useState(false);
 
-    // useEffect(() => {
-    //     console.log(`A altura mudou para ${height} = ${typeof height}`);
-    // }, [height]);
-    // useEffect(() => {
-    //     console.log(`O peso mudou para ${weight} = ${typeof weight}`);
-    // }, [weight]);
     useEffect(() => {
         console.log(`O imc mudou para ${imc} = ${typeof imc}`);
-        imcValidator();
         checkClassImc();
     }, [imc]);
-    // useEffect(() => {
-    //     console.log(`O validador mudou para ${allInputsValid} = ${typeof allInputsValid}`);
-    // }, [allInputsValid])
-    // useEffect(() => {
-    //     console.log(`O validador imc mudou para ${imcValid} = ${typeof imcValid}`);
-    // }, [imcValid]);
     useEffect(() => {
         console.log(`A classImc mudou para ${classImc}`);
     }, [classImc])
+
+    const calcInit = () => {
+        return setCalcOn(true)
+    }
+    const calcClean = () => {
+        return setCalcOn(false);
+    }
 
     const inputValidator = () => {
         if (isNaN(height) || isNaN(weight) || height === 0 || weight === 0) {
@@ -38,14 +32,6 @@ const ImcCal = () => {
         } else {
             return setAllInputsValid(true)
         };
-    };
-
-    const imcValidator = () => {
-        if (isNaN(imc) || imc === 0) {
-            return setImcValid(false)
-        } else {
-            return setImcValid(true)
-        }
     };
 
     const imcOperation = () => {
@@ -71,6 +57,13 @@ const ImcCal = () => {
         setHeight(0);
         setWeight(0);
         setImc(0);
+        calcClean();
+    }
+
+    const btnCalcSubmit = () => {
+        imcOperation();
+        inputValidator();
+        calcInit();
     }
 
 
@@ -96,8 +89,7 @@ const ImcCal = () => {
             <div className={styles.imcCalc__buttonGroup}>
                 <button className={`${styles.imcCalc__buttonGroup__button} ${styles.imcCalc__buttonGroup__buttonCalc}`} type="button" 
                     onClick={(e) => {
-                        imcOperation();
-                        inputValidator();
+                        btnCalcSubmit();
                     }}
                 >
                     Calcular
@@ -110,9 +102,9 @@ const ImcCal = () => {
                     Limpar
                 </button>
             </div>
-            {imcValid && (
-                <ImcProductContainer imc={imc} classImc={classImc} allInputsValid={allInputsValid} imcValid={imcValid}/>
-            )}
+                {calcOn && (
+                    <ImcProductContainer imc={imc} classImc={classImc} allInputsValid={allInputsValid}/>
+                )}
         </form>
     )
 }

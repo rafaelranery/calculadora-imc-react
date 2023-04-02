@@ -1,6 +1,6 @@
 import styles from './ImcProductContainer.module.css'
 
-const ImcProductContainer = ({ imc, classImc, allInputsValid,imcValid }) => {
+const ImcProductContainer = ({ imc, classImc, allInputsValid }) => {
 
     let needsMedicalSupport = false;
 
