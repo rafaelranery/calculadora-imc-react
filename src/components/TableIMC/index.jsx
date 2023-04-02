@@ -17,7 +17,7 @@ const TableImc = () => {
                         CLASSIFICAÇÂO
                     </td>
                     <td className={styles.imcTable__cell}>
-                        OBSESIDADE(grau)
+                        OBSESIDADE
                     </td>
                 </tr>
             </thead>

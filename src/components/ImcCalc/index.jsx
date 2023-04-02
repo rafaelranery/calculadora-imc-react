@@ -12,12 +12,8 @@ const ImcCal = () => {
     const [calcOn, setCalcOn] = useState(false);
 
     useEffect(() => {
-        console.log(`O imc mudou para ${imc} = ${typeof imc}`);
         checkClassImc();
     }, [imc]);
-    useEffect(() => {
-        console.log(`A classImc mudou para ${classImc}`);
-    }, [classImc])
 
     const calcInit = () => {
         return setCalcOn(true)
@@ -40,7 +36,7 @@ const ImcCal = () => {
     };
 
     const checkClassImc = () => {
-        if (imc < 18.5) {
+        if (imc < 18.5 && imc > 0) {
             return setClassImc('magreza')
         } if (imc >= 18.5 && imc <= 24.9) {
             return setClassImc('normal')

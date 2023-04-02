@@ -6,19 +6,24 @@
 
 .imcTable__cell {
     padding: 8px;
-    border: 1px solid #555;
+    border: 1px solid var(--greyDark);
 }
 
 .imcTable__header {
     font-weight: bold;
-    background-color: #576CBC;
-    color: aliceblue;
+    background-color: var(--blueDark);
+    color: var(--textLight);
 }
 
 .imcTable__body {
-    background-color: #DAF5FF;
+    background-color: var(--blueLight);
 }
 
-.active {
-    background-color: green;
+@media screen and (max-width: 321px) {
+    .imcTable {
+        font-size: 14px;
+    }
+    .imcTable__cell {
+        padding: 8px 4px;
+    }
 }

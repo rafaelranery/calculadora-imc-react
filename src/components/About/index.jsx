@@ -18,7 +18,6 @@ const About = () => {
                         Quer descobrir seu IMC? Insira seu peso e sua altura nos campos ao lado e compare com os índices da tabela. Importante: siga os exemplos e use pontos como separadores.
                     </p>
                 </article>
-        
                 <TableImc />
             </div>
         </>

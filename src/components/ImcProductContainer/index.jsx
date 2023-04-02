@@ -3,6 +3,7 @@ import styles from './ImcProductContainer.module.css'
 const ImcProductContainer = ({ imc, classImc, allInputsValid }) => {
 
     let needsMedicalSupport = false;
+    
 
     const bgClassSet = () => {
         switch (classImc) {

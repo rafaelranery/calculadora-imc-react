@@ -16,3 +16,9 @@
 .imcInfo__article__p {
     margin: 12px 0;
 }
+
+@media screen and (max-width: 426px) {
+    .icmInfo {
+        width: 100%;
+    }
+}

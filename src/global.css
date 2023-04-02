@@ -5,13 +5,26 @@
     font-family: sans-serif;
 }
 html {
-    background-color: #999;
+    background-color: var(--greyLight);
 }
 
 .body-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
+
+@media screen and (max-width: 768px) {
+    .body-grid {
+        display: block;
+    }
+}
+@media screen and (max-width: 426px) {
+    .body-grid {
+        width: 95%;
+        margin: 0 auto;
+    }
+}
+
 
 /* Classes para classificação IMC */
 .normal {
@@ -31,4 +44,11 @@ html {
 /* Variables */
 :root {
     --blackPrimary: #000;
+    --blueDark: #576CBC;
+    --blueLight: #DAF5FF;
+    --textLight: #f0f8ff;
+    --greyLight: #999;
+    --greyDark: #555;
+    --btnColorPrimary: #27E1C1;
+    --btnColorSecondary: #B0DAFF;
 }
